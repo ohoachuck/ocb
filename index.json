@@ -1,108 +1,72 @@
 {
-  "apps" : [
+  "apps": [
     {
-      "category" : "utilities",
-      "icon" : {
-        "symbol" : "map.fill",
-        "tint" : "blue"
+      "category": "finance",
+      "icon": {
+        "symbol": "creditcard.fill",
+        "tint": "blue"
       },
-      "mcp" : [
-
-      ],
-      "name" : "Ma position",
-      "networkOrigins" : [
-        "https://tile.openstreetmap.org"
-      ],
-      "permissions" : [
-        "location.read"
-      ],
-      "shots" : [
-
-      ],
-      "slug" : "ma-position",
-      "summary" : "Montre votre position sur une carte et suit le marqueur quand elle change. Affiche la précision et l’heure de la dernière position reçue.",
-      "updated" : "2026-09-22",
-      "version" : 3
-    },
-    {
-      "category" : "finance",
-      "icon" : {
-        "symbol" : "creditcard.fill",
-        "tint" : "blue"
-      },
-      "mcp" : [
-
-      ],
-      "name" : "Simulateur de prêt",
-      "networkOrigins" : [
-
-      ],
-      "permissions" : [
+      "mcp": [],
+      "name": "Simulateur de prêt",
+      "networkOrigins": [],
+      "permissions": [
         "share.present"
       ],
-      "shots" : [
+      "shots": [
         "shots/1.jpg"
       ],
-      "slug" : "simulateur-de-pret",
-      "summary" : "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
-      "updated" : "2026-09-22",
-      "version" : 2
+      "slug": "simulateur-de-pret",
+      "summary": "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
+      "updated": "2026-09-22",
+      "version": 2
     },
     {
-      "category" : "utilities",
-      "icon" : {
-        "symbol" : "globe",
-        "tint" : "blue"
+      "category": "utilities",
+      "icon": {
+        "symbol": "globe",
+        "tint": "blue"
       },
-      "mcp" : [
+      "mcp": [
         "custom/agentdomainsearch.com/mcp"
       ],
-      "name" : "DomainRadar",
-      "networkOrigins" : [
-
-      ],
-      "permissions" : [
+      "name": "DomainRadar",
+      "networkOrigins": [],
+      "permissions": [
         "share.present"
       ],
-      "shots" : [
-
-      ],
-      "slug" : "domainradar",
-      "summary" : "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
-      "updated" : "2026-09-22",
-      "version" : 2
+      "shots": [],
+      "slug": "domainradar",
+      "summary": "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
+      "updated": "2026-09-22",
+      "version": 2
     },
     {
-      "icon" : {
-        "symbol" : "star.fill",
-        "tint" : "blue"
+      "icon": {
+        "symbol": "star.fill",
+        "tint": "blue"
       },
-      "iconImage" : "icon.jpg",
-      "mcp" : [
-
-      ],
-      "name" : "Parle & Traduis",
-      "networkOrigins" : [
-
-      ],
-      "permissions" : [
+      "iconImage": "icon.jpg",
+      "mcp": [],
+      "name": "Parle & Traduis",
+      "networkOrigins": [],
+      "permissions": [
         "speech.listen",
         "llm.ask"
       ],
-      "shots" : [
+      "shots": [
         "shots/1.jpg",
         "shots/2.jpg",
         "shots/3.jpg"
       ],
-      "slug" : "parle-traduis",
-      "summary" : "L’application permet d’écouter une phrase en français, d’afficher sa transcription puis de la traduire dans l’une des cinq langues disponibles(dont le Wolof). Elle permet de répéter l’expérience facilement.",
-      "updated" : "2026-09-22",
-      "version" : 3
+      "slug": "parle-traduis",
+      "summary": "L’application permet d’écouter une phrase en français, d’afficher sa transcription puis de la traduire dans l’une des cinq langues disponibles(dont le Wolof). Elle permet de répéter l’expérience facilement.",
+      "updated": "2026-09-22",
+      "version": 3
     }
   ],
-  "publisher" : {
-    "github" : "ohoachuck",
-    "name" : "ohoachuck"
+  "publisher": {
+    "github": "ohoachuck",
+    "name": "ohoachuck"
   },
-  "schemaVersion" : 1
+  "schemaVersion": 1
 }
