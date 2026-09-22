@@ -1,6 +1,6 @@
 # Ballons Confettis
 
-Jeu d’arcade hors ligne où l’on éclate des ballons lumineux montants avant qu’ils ne fassent perdre toutes les vies.
+Cette application permet de jouer à un jeu d’arcade hors ligne où l’on éclate des ballons dessinés pour atteindre un score. Elle affiche un écran d’accueil avec le meilleur score et un bouton pour commencer.
 
 ![Capture](shots/1.jpg)
 

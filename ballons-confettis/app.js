@@ -175,30 +175,50 @@
     return state.audio.musicCtx;
   }
 
+  function resumeAudioContext(ctx) {
+    if (!ctx || (ctx.state !== 'suspended' && ctx.state !== 'interrupted')) {
+      return Promise.resolve();
+    }
+    return ctx.resume();
+  }
+
   function playBalloonPop() {
     if (!state.soundEnabled) return;
     const ctx = ensureSfxContext();
     if (!ctx) return;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
 
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(620, ctx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(240, ctx.currentTime + 0.12);
+    const play = () => {
+      if (!state.soundEnabled) return;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
 
-    gain.gain.setValueAtTime(0.35, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(620, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(240, ctx.currentTime + 0.12);
 
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    osc.start();
-    osc.stop(ctx.currentTime + 0.16);
+      gain.gain.setValueAtTime(0.35, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.14);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.16);
+    };
+
+    resumeAudioContext(ctx).then(play).catch(() => {});
   }
 
   function startMusic() {
     if (!state.soundEnabled) return;
     const ctx = ensureMusicContext();
     if (!ctx || state.audio.musicNode) return;
+
+    if (ctx.state === 'suspended' || ctx.state === 'interrupted') {
+      resumeAudioContext(ctx).then(() => {
+        if (state.soundEnabled && !state.audio.musicNode) startMusic();
+      }).catch(() => {});
+      return;
+    }
 
     const tempo = 96;
     const beat = 60 / tempo;
@@ -389,17 +409,14 @@
 
   function onGameAreaPointer(ev) {
     if (!state.running) return;
-    if (ev.type === 'pointerdown' || ev.type === 'mousedown' || ev.type === 'touchstart') {
-      const target = ev.target && ev.target.closest ? ev.target.closest('.balloon') : null;
-      if (target && dom.gameArea.contains(target)) {
-        ev.preventDefault();
-        const touch = ev.touches && ev.touches[0];
-        const clientX = typeof ev.clientX === 'number' ? ev.clientX : (touch ? touch.clientX : 0);
-        const clientY = typeof ev.clientY === 'number' ? ev.clientY : (touch ? touch.clientY : 0);
-        popBalloonElement(target, clientX, clientY);
-      } else {
-        applyTapPenalty();
-      }
+    const target = ev.target && ev.target.closest ? ev.target.closest('.balloon') : null;
+    if (target && dom.gameArea.contains(target)) {
+      ev.preventDefault();
+      const clientX = typeof ev.clientX === 'number' ? ev.clientX : 0;
+      const clientY = typeof ev.clientY === 'number' ? ev.clientY : 0;
+      popBalloonElement(target, clientX, clientY);
+    } else {
+      applyTapPenalty();
     }
   }
 
@@ -507,8 +524,6 @@
 
     if (dom.gameArea) {
       dom.gameArea.addEventListener('pointerdown', onGameAreaPointer);
-      dom.gameArea.addEventListener('mousedown', onGameAreaPointer);
-      dom.gameArea.addEventListener('touchstart', onGameAreaPointer, { passive: false });
       dom.gameArea.addEventListener('keydown', onKeyDown);
     }
   }

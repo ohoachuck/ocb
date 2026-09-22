@@ -1,9 +1,9 @@
 {
   "files" : [
     {
-      "bytes" : 15478,
+      "bytes" : 15663,
       "path" : "app.js",
-      "sha256" : "aea759840a01f65d871b76830290f869b869f1148e240798144a3c5dade90ee8"
+      "sha256" : "5a7194f597d3bcbc1bc94bbceb144622502d5e3d30113182a3d82057b18278b8"
     },
     {
       "bytes" : 3011,
@@ -13,7 +13,7 @@
     {
       "bytes" : 379,
       "path" : "manifest.json",
-      "sha256" : "a900cb0cfa0ae55ea7b3671b00c68bbd1751074b66611f8adeb41fa06bbf95e1"
+      "sha256" : "667ff329617cf5e511844d89dac142d7058c1ecb0a08207e2beb27b2bba83e1b"
     },
     {
       "bytes" : 6030,
