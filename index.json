@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "publisher": {
+    "name": "Olivier Hoachuck",
+    "github": "ohoachuck"
+  },
+  "apps": [
+    {
+      "slug": "ma-position",
+      "name": "Ma position",
+      "summary": "Montre votre position sur une carte et suit le marqueur quand elle change. Affiche la précision et l’heure de la dernière position reçue.",
+      "category": "utilities",
+      "version": 1,
+      "updated": "2026-09-22",
+      "icon": {
+        "symbol": "map.fill",
+        "tint": "blue"
+      },
+      "permissions": [
+        "location.read"
+      ],
+      "networkOrigins": [
+        "https://tile.openstreetmap.org"
+      ],
+      "mcp": [],
+      "shots": []
+    },
+    {
+      "slug": "simulateur-de-pret",
+      "name": "Simulateur de prêt",
+      "summary": "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
+      "category": "finance",
+      "version": 2,
+      "updated": "2026-09-22",
+      "icon": {
+        "symbol": "creditcard.fill",
+        "tint": "blue"
+      },
+      "permissions": [
+        "share.present"
+      ],
+      "networkOrigins": [],
+      "mcp": [],
+      "shots": [
+        "shots/1.jpg"
+      ]
+    },
+    {
+      "slug": "domainradar",
+      "name": "DomainRadar",
+      "summary": "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
+      "category": "utilities",
+      "version": 2,
+      "updated": "2026-09-22",
+      "icon": {
+        "symbol": "globe",
+        "tint": "blue"
+      },
+      "permissions": [
+        "share.present"
+      ],
+      "networkOrigins": [],
+      "mcp": [
+        "custom/agentdomainsearch.com/mcp"
+      ],
+      "shots": []
+    }
+  ]
+}

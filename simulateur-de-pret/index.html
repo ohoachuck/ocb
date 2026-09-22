@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102a43">
+  <title>Simulateur de prêt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="eyebrow">FINANCEMENT • SIMULATION</div>
+      <h1>Votre prêt,<br><em>en clair.</em></h1>
+      <p>Une estimation simple, lisible et transparente.</p>
+    </header>
+
+    <form id="loan-form" novalidate>
+      <section class="panel inputs-panel" aria-labelledby="details-title">
+        <h2 id="details-title">Paramètres du prêt</h2>
+        <label for="amount">Montant emprunté</label>
+        <div class="input-wrap money"><input id="amount" name="amount" type="number" inputmode="decimal" min="1" step="100" placeholder="250 000" required><span>€</span></div>
+        <div class="split">
+          <div>
+            <label for="rate">Taux d’intérêt annuel</label>
+            <div class="input-wrap"><input id="rate" name="rate" type="number" inputmode="decimal" min="0" step="0.01" placeholder="3,50" required><span>%</span></div>
+          </div>
+          <div>
+            <label for="insurance">Taux d’assurance annuel</label>
+            <div class="input-wrap"><input id="insurance" name="insurance" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0,30" required><span>%</span></div>
+          </div>
+        </div>
+        <label for="duration">Durée</label>
+        <div class="duration-row">
+          <input id="duration" name="duration" type="number" inputmode="numeric" min="1" step="1" placeholder="20" required>
+          <select id="unit" name="unit" aria-label="Unité de durée"><option value="years">années</option><option value="months">mois</option></select>
+        </div>
+        <button class="primary" type="submit">Calculer ma mensualité <span>→</span></button>
+        <p id="form-error" class="error" role="alert" hidden></p>
+      </section>
+    </form>
+
+    <section id="result" hidden aria-live="polite">
+      <div class="summary">
+        <div class="summary-label">Mensualité estimée</div>
+        <div id="monthly" class="monthly">—</div>
+        <div id="summary-note" class="summary-note"></div>
+      </div>
+      <div class="stats">
+        <div><span>Coût total</span><strong id="total-cost">—</strong></div>
+        <div><span>Intérêts</span><strong id="total-interest">—</strong></div>
+        <div><span>Assurance</span><strong id="total-insurance">—</strong></div>
+      </div>
+      <div class="schedule-head">
+        <div><h2>Échéancier</h2><p id="schedule-count"></p></div>
+        <button id="share" class="share-button" type="button" aria-label="Partager l’échéancier">Partager <span>↗</span></button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">N°</th><th scope="col">Capital</th><th scope="col">Intérêts</th><th scope="col">Assur.</th><th scope="col">Total</th></tr></thead>
+          <tbody id="schedule-body"></tbody>
+        </table>
+      </div>
+      <p id="share-status" class="status" role="status" hidden></p>
+    </section>
+    <footer>Estimation indicative · Les montants sont arrondis aux centimes</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

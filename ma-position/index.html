@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>Ma position</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> LOCALISATION EN DIRECT</div>
+      <h1>Ma position</h1>
+      <p class="intro">Votre point actuel, mis à jour pendant que l’application est ouverte.</p>
+    </header>
+
+    <section class="map-card" aria-label="Carte de votre position">
+      <div id="map" class="map" role="img" aria-label="Carte en attente de votre position">
+        <div class="map-message" id="mapMessage">Recherche de votre position…</div>
+      </div>
+      <div class="map-footer">
+        <span class="live-label"><span class="dot" aria-hidden="true"></span> Suivi actif</span>
+        <span class="attribution">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a></span>
+      </div>
+    </section>
+
+    <section class="details" aria-labelledby="details-title">
+      <div class="section-heading">
+        <h2 id="details-title">Dernière mesure</h2>
+        <span id="stateBadge" class="state-badge waiting">En attente</span>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Précision</span>
+          <strong id="accuracy">—</strong>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Reçue à</span>
+          <strong id="updated">—</strong>
+        </div>
+      </div>
+      <p id="notice" class="notice" role="status">Autorisez l’accès à votre position pour afficher la carte.</p>
+    </section>
+
+    <p class="privacy-note"><span aria-hidden="true">⌖</span> Votre position reste sur cet appareil.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

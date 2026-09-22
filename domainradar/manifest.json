@@ -1,0 +1,18 @@
+{
+  "entry": "index.html",
+  "icon": {
+    "symbol": "globe",
+    "tint": "blue"
+  },
+  "id": "810F5E9C-CBBD-458E-B2FE-68C86BA06A0F",
+  "mcp": [
+    "custom/agentdomainsearch.com/mcp"
+  ],
+  "name": "DomainRadar",
+  "networkOrigins": [],
+  "permissions": [
+    "share.present"
+  ],
+  "schemaVersion": 1,
+  "version": 2
+}
