@@ -1,54 +1,6 @@
 {
   "apps" : [
     {
-      "category" : "finance",
-      "icon" : {
-        "symbol" : "creditcard.fill",
-        "tint" : "blue"
-      },
-      "mcp" : [
-
-      ],
-      "name" : "Simulateur de prêt",
-      "networkOrigins" : [
-
-      ],
-      "permissions" : [
-        "share.present"
-      ],
-      "shots" : [
-        "shots/1.jpg"
-      ],
-      "slug" : "simulateur-de-pret",
-      "summary" : "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
-      "updated" : "2026-09-22",
-      "version" : 2
-    },
-    {
-      "category" : "utilities",
-      "icon" : {
-        "symbol" : "globe",
-        "tint" : "blue"
-      },
-      "mcp" : [
-        "custom/agentdomainsearch.com/mcp"
-      ],
-      "name" : "DomainRadar",
-      "networkOrigins" : [
-
-      ],
-      "permissions" : [
-        "share.present"
-      ],
-      "shots" : [
-
-      ],
-      "slug" : "domainradar",
-      "summary" : "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
-      "updated" : "2026-09-22",
-      "version" : 2
-    },
-    {
       "icon" : {
         "symbol" : "star.fill",
         "tint" : "blue"
