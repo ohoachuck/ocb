@@ -1,0 +1,24 @@
+{
+  "createdBy" : {
+    "promptVersion" : "20",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "gamecontroller.fill",
+    "tint" : "purple"
+  },
+  "id" : "607FE98C-4C64-4B09-85CD-2F172E775ED4",
+  "mcp" : [
+
+  ],
+  "name" : "Ballons Confettis",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+
+  ],
+  "schemaVersion" : 1,
+  "version" : 5
+}

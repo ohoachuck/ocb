@@ -1,72 +1,111 @@
 {
-  "apps": [
+  "apps" : [
     {
-      "category": "finance",
-      "icon": {
-        "symbol": "creditcard.fill",
-        "tint": "blue"
+      "category" : "finance",
+      "icon" : {
+        "symbol" : "creditcard.fill",
+        "tint" : "blue"
       },
-      "mcp": [],
-      "name": "Simulateur de prêt",
-      "networkOrigins": [],
-      "permissions": [
+      "mcp" : [
+
+      ],
+      "name" : "Simulateur de prêt",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
         "share.present"
       ],
-      "shots": [
+      "shots" : [
         "shots/1.jpg"
       ],
-      "slug": "simulateur-de-pret",
-      "summary": "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
-      "updated": "2026-09-22",
-      "version": 2
+      "slug" : "simulateur-de-pret",
+      "summary" : "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
+      "updated" : "2026-09-22",
+      "version" : 2
     },
     {
-      "category": "utilities",
-      "icon": {
-        "symbol": "globe",
-        "tint": "blue"
+      "category" : "utilities",
+      "icon" : {
+        "symbol" : "globe",
+        "tint" : "blue"
       },
-      "mcp": [
+      "mcp" : [
         "custom/agentdomainsearch.com/mcp"
       ],
-      "name": "DomainRadar",
-      "networkOrigins": [],
-      "permissions": [
+      "name" : "DomainRadar",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
         "share.present"
       ],
-      "shots": [],
-      "slug": "domainradar",
-      "summary": "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
-      "updated": "2026-09-22",
-      "version": 2
+      "shots" : [
+
+      ],
+      "slug" : "domainradar",
+      "summary" : "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
+      "updated" : "2026-09-22",
+      "version" : 2
     },
     {
-      "icon": {
-        "symbol": "star.fill",
-        "tint": "blue"
+      "icon" : {
+        "symbol" : "star.fill",
+        "tint" : "blue"
       },
-      "iconImage": "icon.jpg",
-      "mcp": [],
-      "name": "Parle & Traduis",
-      "networkOrigins": [],
-      "permissions": [
+      "iconImage" : "icon.jpg",
+      "mcp" : [
+
+      ],
+      "name" : "Parle & Traduis",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
         "speech.listen",
         "llm.ask"
       ],
-      "shots": [
+      "shots" : [
         "shots/1.jpg",
         "shots/2.jpg",
         "shots/3.jpg"
       ],
-      "slug": "parle-traduis",
-      "summary": "L’application permet d’écouter une phrase en français, d’afficher sa transcription puis de la traduire dans l’une des cinq langues disponibles(dont le Wolof). Elle permet de répéter l’expérience facilement.",
-      "updated": "2026-09-22",
-      "version": 3
+      "slug" : "parle-traduis",
+      "summary" : "L’application permet d’écouter une phrase en français, d’afficher sa transcription puis de la traduire dans l’une des cinq langues disponibles(dont le Wolof). Elle permet de répéter l’expérience facilement.",
+      "updated" : "2026-09-22",
+      "version" : 3
+    },
+    {
+      "icon" : {
+        "symbol" : "gamecontroller.fill",
+        "tint" : "purple"
+      },
+      "iconImage" : "icon.jpg",
+      "mcp" : [
+
+      ],
+      "name" : "Ballons Confettis",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+
+      ],
+      "shots" : [
+        "shots/1.jpg",
+        "shots/2.jpg",
+        "shots/3.jpg",
+        "shots/4.jpg"
+      ],
+      "slug" : "ballons-confettis",
+      "summary" : "Jeu d’arcade hors ligne où l’on éclate des ballons lumineux montants avant qu’ils ne fassent perdre toutes les vies.",
+      "updated" : "2026-09-22",
+      "version" : 5
     }
   ],
-  "publisher": {
-    "github": "ohoachuck",
-    "name": "ohoachuck"
+  "publisher" : {
+    "github" : "ohoachuck",
+    "name" : "Olivier HO-A-CHUCK"
   },
-  "schemaVersion": 1
+  "schemaVersion" : 1
 }

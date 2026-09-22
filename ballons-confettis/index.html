@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ballons Confettis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app-root">
+    <header class="top-bar" role="banner">
+      <div class="top-bar-inner">
+        <button id="soundToggle" class="icon-button" aria-pressed="false" aria-label="Activer ou couper tous les sons">
+          <span aria-hidden="true">🔊</span>
+        </button>
+        <div class="life-container" aria-label="Points de vie restants" role="status">
+          <div class="life-label">Vie</div>
+          <div class="life-bar">
+            <div id="lifeFill" class="life-fill"></div>
+          </div>
+        </div>
+        <div class="score-display" aria-live="polite" aria-label="Score actuel">
+          Score : <span id="scoreValue">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main" aria-live="off">
+      <section id="homeScreen" class="screen active" aria-label="Écran d'accueil">
+        <div class="screen-inner">
+          <h1 class="title">Ballons Confettis</h1>
+          <p class="subtitle">Éclate les ballons avant qu'ils n'atteignent le ciel&nbsp;!</p>
+          <button id="startButton" class="primary-button" aria-label="Lancer une partie arcade">Jouer</button>
+          <div class="home-info">
+            <div class="info-row">
+              <span>Meilleur score</span>
+              <strong id="bestScoreHome">0</strong>
+            </div>
+            <div class="info-row">
+              <span>Dernière partie</span>
+              <strong id="lastScoreHome">–</strong>
+            </div>
+          </div>
+          <p class="hint">Touchez les ballons pour les éclater. Touchez le ciel sans ballon pour une petite pénalité.</p>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="screen" aria-label="Écran de jeu" aria-hidden="true">
+        <div id="gameArea" class="game-area" tabindex="0" aria-label="Zone de jeu, touchez ou cliquez pour éclater les ballons"></div>
+      </section>
+
+      <section id="endScreen" class="screen" aria-label="Fin de partie" aria-hidden="true">
+        <div class="screen-inner">
+          <h2 class="title">Fin de partie</h2>
+          <p class="final-score">Score&nbsp;: <strong id="finalScore">0</strong></p>
+          <p class="final-best">Meilleur score&nbsp;: <strong id="bestScore">0</strong></p>
+
+          <div class="recent-scores" aria-label="Derniers scores">
+            <h3>Derniers scores</h3>
+            <ol id="recentScoresList" class="scores-list"></ol>
+          </div>
+
+          <button id="restartButton" class="primary-button" aria-label="Rejouer une partie">Rejouer</button>
+          <button id="homeButton" class="secondary-button" aria-label="Retour à l'écran d'accueil">Accueil</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
