@@ -1,0 +1,25 @@
+{
+  "createdBy" : {
+    "promptVersion" : "20",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "star.fill",
+    "tint" : "blue"
+  },
+  "id" : "0C6E31FD-ABF0-48F5-8ED8-4DF893F680F4",
+  "mcp" : [
+
+  ],
+  "name" : "Parle & Traduis",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+    "speech.listen",
+    "llm.ask"
+  ],
+  "schemaVersion" : 1,
+  "version" : 3
+}

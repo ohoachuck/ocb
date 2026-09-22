@@ -1,69 +1,108 @@
 {
-  "schemaVersion": 1,
-  "publisher": {
-    "name": "Olivier Hoachuck",
-    "github": "ohoachuck"
-  },
-  "apps": [
+  "apps" : [
     {
-      "slug": "ma-position",
-      "name": "Ma position",
-      "summary": "Montre votre position sur une carte et suit le marqueur quand elle change. Affiche la précision et l’heure de la dernière position reçue.",
-      "category": "utilities",
-      "version": 3,
-      "updated": "2026-09-22",
-      "icon": {
-        "symbol": "map.fill",
-        "tint": "blue"
+      "category" : "utilities",
+      "icon" : {
+        "symbol" : "map.fill",
+        "tint" : "blue"
       },
-      "permissions": [
-        "location.read"
+      "mcp" : [
+
       ],
-      "networkOrigins": [
+      "name" : "Ma position",
+      "networkOrigins" : [
         "https://tile.openstreetmap.org"
       ],
-      "mcp": [],
-      "shots": []
+      "permissions" : [
+        "location.read"
+      ],
+      "shots" : [
+
+      ],
+      "slug" : "ma-position",
+      "summary" : "Montre votre position sur une carte et suit le marqueur quand elle change. Affiche la précision et l’heure de la dernière position reçue.",
+      "updated" : "2026-09-22",
+      "version" : 3
     },
     {
-      "slug": "simulateur-de-pret",
-      "name": "Simulateur de prêt",
-      "summary": "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
-      "category": "finance",
-      "version": 2,
-      "updated": "2026-09-22",
-      "icon": {
-        "symbol": "creditcard.fill",
-        "tint": "blue"
+      "category" : "finance",
+      "icon" : {
+        "symbol" : "creditcard.fill",
+        "tint" : "blue"
       },
-      "permissions": [
+      "mcp" : [
+
+      ],
+      "name" : "Simulateur de prêt",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
         "share.present"
       ],
-      "networkOrigins": [],
-      "mcp": [],
-      "shots": [
+      "shots" : [
         "shots/1.jpg"
-      ]
+      ],
+      "slug" : "simulateur-de-pret",
+      "summary" : "Calcule une mensualité à partir du montant emprunté, du taux d’intérêt, du taux d’assurance et de la durée, puis dresse l’échéancier complet.",
+      "updated" : "2026-09-22",
+      "version" : 2
     },
     {
-      "slug": "domainradar",
-      "name": "DomainRadar",
-      "summary": "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
-      "category": "utilities",
-      "version": 2,
-      "updated": "2026-09-22",
-      "icon": {
-        "symbol": "globe",
-        "tint": "blue"
+      "category" : "utilities",
+      "icon" : {
+        "symbol" : "globe",
+        "tint" : "blue"
       },
-      "permissions": [
-        "share.present"
-      ],
-      "networkOrigins": [],
-      "mcp": [
+      "mcp" : [
         "custom/agentdomainsearch.com/mcp"
       ],
-      "shots": []
+      "name" : "DomainRadar",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+        "share.present"
+      ],
+      "shots" : [
+
+      ],
+      "slug" : "domainradar",
+      "summary" : "Cherche si un nom de domaine est libre : un radical est testé sur les extensions courantes, un domaine complet est vérifié directement.",
+      "updated" : "2026-09-22",
+      "version" : 2
+    },
+    {
+      "icon" : {
+        "symbol" : "star.fill",
+        "tint" : "blue"
+      },
+      "iconImage" : "icon.jpg",
+      "mcp" : [
+
+      ],
+      "name" : "Parle & Traduis",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+        "speech.listen",
+        "llm.ask"
+      ],
+      "shots" : [
+        "shots/1.jpg",
+        "shots/2.jpg",
+        "shots/3.jpg"
+      ],
+      "slug" : "parle-traduis",
+      "summary" : "Écouter une phrase en français, afficher sa transcription, puis la traduire en anglais après la fin de l’écoute.",
+      "updated" : "2026-09-22",
+      "version" : 3
     }
-  ]
+  ],
+  "publisher" : {
+    "github" : "ohoachuck",
+    "name" : "ohoachuck"
+  },
+  "schemaVersion" : 1
 }
