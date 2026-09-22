@@ -1,6 +1,6 @@
 # Parle & Traduis
 
-Écouter une phrase en français, afficher sa transcription, puis la traduire en anglais après la fin de l’écoute.
+L’application permet d’écouter une phrase en français, d’afficher sa transcription puis de la traduire dans l’une des cinq langues disponibles(dont le Wolof). Elle permet de répéter l’expérience facilement.
 
 ![Capture](shots/1.jpg)
 
