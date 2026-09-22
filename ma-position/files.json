@@ -12,13 +12,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 1998,
-      "sha256": "256344dcc161e66dd0c688c0e2b3c718dea49bb2a34e78fb16fbad028c58ae75"
+      "bytes": 2001,
+      "sha256": "574eb7a9fac2e5c83f308328d5dbb7f29b1fb3e2972bca419e85395b5c8f797c"
     },
     {
       "path": "manifest.json",
       "bytes": 322,
-      "sha256": "626b5d4aec652e7880753230f1f85f4c6c7ba3be688e58f16a2973620187609e"
+      "sha256": "75d9383df6f9e91f8f4c95ab75d223b86ce85a3c200482e8c071030169f69fa4"
     }
   ]
 }
