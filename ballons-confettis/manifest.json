@@ -1,4 +1,9 @@
 {
+  "author" : {
+    "email" : "olivier.hoachuck@gmail.com",
+    "name" : "Mr Olivier HO-A-CHUCK",
+    "website" : "https:\/\/hoachuck.info"
+  },
   "createdBy" : {
     "promptVersion" : "20",
     "provider" : "llmproxy"
@@ -8,7 +13,7 @@
     "symbol" : "gamecontroller.fill",
     "tint" : "purple"
   },
-  "id" : "607FE98C-4C64-4B09-85CD-2F172E775ED4",
+  "id" : "56B28848-ABF9-52A3-8147-031DDF524991",
   "mcp" : [
 
   ],
@@ -20,5 +25,6 @@
 
   ],
   "schemaVersion" : 1,
-  "version" : 8
+  "summary" : "Cette application permet de jouer à un jeu d’arcade hors ligne où l’on éclate des ballons dessinés pour atteindre un score. Elle affiche un écran d’accueil avec le meilleur score et un bouton pour commencer.",
+  "version" : 1
 }
