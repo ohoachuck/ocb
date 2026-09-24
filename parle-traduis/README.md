@@ -22,6 +22,6 @@ Rien : cette app ne sort pas du téléphone.
 Une page HTML, une feuille de style, un script, exécutés localement sur le
 téléphone. Pas de dépendance, pas d’outil de construction.
 
-Publiée par ohoachuck (@ohoachuck). Relue par personne d’autre.
+Publiée par Olivier HO-A-CHUCK (@ohoachuck). Relue par personne d’autre.
 
 Sous licence MIT — voir `LICENSE`.

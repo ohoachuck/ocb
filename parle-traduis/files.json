@@ -16,9 +16,9 @@
       "sha256" : "3b6d3cd2c5af4ef17111636e79a324b7334f913873352004f22c6f72c54111c3"
     },
     {
-      "bytes" : 399,
+      "bytes" : 776,
       "path" : "manifest.json",
-      "sha256" : "8fb2e8cfbe1c3cce6751dcda5530e4121feb27fbb5cf5527414a9c48510e1ceb"
+      "sha256" : "e95acf5d3eb2ef2f944663b7443e057d4bb2299fb9b193868245df8da3e74e63"
     }
   ]
 }

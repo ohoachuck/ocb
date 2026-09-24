@@ -1,6 +1,11 @@
 {
   "apps" : [
     {
+      "author" : {
+        "email" : "olivier.hoachuck@gmail.com",
+        "name" : "Nom de test",
+        "website" : "https://blog.hoachuck.biz"
+      },
       "icon" : {
         "symbol" : "star.fill",
         "tint" : "blue"
@@ -24,8 +29,8 @@
       ],
       "slug" : "parle-traduis",
       "summary" : "L’application permet d’écouter une phrase en français, d’afficher sa transcription puis de la traduire dans l’une des cinq langues disponibles(dont le Wolof). Elle permet de répéter l’expérience facilement.",
-      "updated" : "2026-09-22",
-      "version" : 3
+      "updated" : "2026-09-24",
+      "version" : 1
     },
     {
       "icon" : {
