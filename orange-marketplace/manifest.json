@@ -1,0 +1,30 @@
+{
+  "author" : {
+    "email" : "olivier.hoachuck@gmail.com",
+    "name" : "Olivier HO-À-CHUCK"
+  },
+  "category" : "shopping",
+  "createdBy" : {
+    "promptVersion" : "20",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "cart.fill",
+    "tint" : "orange"
+  },
+  "id" : "6E04DA56-5A5A-4173-BBF0-815B98ED4477",
+  "mcp" : [
+    "com.doungdoung\/orange-marketplace"
+  ],
+  "name" : "Orange Marketplace",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+
+  ],
+  "schemaVersion" : 1,
+  "summary" : "Une app pour rechercher, comparer et découvrir les promotions des produits vendus sur la Marketplace Orange, avec des images nettes et bien visibles.",
+  "version" : 3
+}

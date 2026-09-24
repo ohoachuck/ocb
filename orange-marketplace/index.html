@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14100c" media="(prefers-color-scheme: dark)">
+  <title>Orange Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header" aria-label="Barre de navigation">
+    <button id="backBtn" class="header-action hidden" type="button" aria-label="Revenir en arrière">←</button>
+    <div id="headerTitle" class="header-title">Le Marché</div>
+    <button id="filterBtn" class="header-action" type="button" aria-label="Afficher les filtres" aria-expanded="false">Filtres</button>
+  </header>
+
+  <main id="appMain">
+    <section id="searchView" class="view active" aria-labelledby="searchHeading">
+      <h1 id="searchHeading" class="hero-title">Trouvez le bon produit,<br><em>pas juste le premier.</em></h1>
+      <form id="searchForm" class="search-box" role="search">
+        <label class="sr-only" for="query">Rechercher des produits</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="query" name="query" type="search" placeholder="Téléphone, coque, écouteurs…" autocomplete="off">
+        <button type="submit">Chercher</button>
+      </form>
+
+      <div id="recentArea" class="recent-area hidden">
+        <div class="section-kicker">Recherches récentes</div>
+        <div id="recentList" class="chips" aria-label="Recherches récentes"></div>
+      </div>
+
+      <div id="filterPanel" class="filter-panel hidden" aria-label="Filtres de recherche">
+        <div class="filter-grid">
+          <label>Prix minimum<input id="priceMin" type="number" inputmode="decimal" min="0" step="1" placeholder="0 €"></label>
+          <label>Prix maximum<input id="priceMax" type="number" inputmode="decimal" min="0" step="1" placeholder="Sans limite"></label>
+          <label>Marque<input id="brandFilter" type="text" placeholder="Ex. Samsung"></label>
+          <label>Vendeur<input id="sellerFilter" type="text" placeholder="Ex. Orange"></label>
+          <label class="wide">Catégorie<select id="categoryFilter"><option value="">Toutes les catégories</option></select></label>
+          <label class="wide">Trier par<select id="sortFilter"><option value="relevance">Pertinence</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix décroissant</option><option value="discount">Meilleure remise</option></select></label>
+        </div>
+        <div class="switch-list">
+          <label><input id="saleFilter" type="checkbox"><span>En promotion</span></label>
+          <label><input id="refurbFilter" type="checkbox"><span>Reconditionné</span></label>
+          <label><input id="orangeFilter" type="checkbox"><span>Vendu par Orange</span></label>
+        </div>
+        <div class="filter-actions"><button id="resetFilters" class="text-button" type="button">Effacer</button><button id="applyFilters" class="primary compact" type="button">Appliquer</button></div>
+      </div>
+
+      <div id="welcome" class="welcome">
+        <div class="welcome-orbit" aria-hidden="true"><span>€</span></div>
+        <h2>Votre raccourci vers la Marketplace</h2>
+        <p>Recherchez parmi les accessoires, smartphones reconditionnés, objets connectés et plus encore.</p>
+        <div class="quick-grid">
+          <button type="button" data-query="smartphone reconditionné"><b>↻</b><span>Reconditionné</span></button>
+          <button type="button" data-query="écouteurs"><b>♫</b><span>Écouteurs</span></button>
+          <button type="button" data-query="coque"><b>▣</b><span>Coques</span></button>
+          <button type="button" data-query="chargeur"><b>ϟ</b><span>Charge</span></button>
+        </div>
+      </div>
+
+      <div id="searchStatus" class="status hidden" role="status"></div>
+      <div id="resultHeading" class="results-heading hidden"><div><span class="section-kicker">Résultats</span><h2 id="resultCount">Produits</h2></div><span id="syncLabel" class="sync-label"></span></div>
+      <div id="results" class="product-list"></div>
+    </section>
+
+    <section id="promoView" class="view" aria-labelledby="promoHeading">
+      <div class="promo-intro">
+        <span class="section-kicker">Sélection du moment</span>
+        <h1 id="promoHeading">Les prix qui font<br><em>pencher la balance.</em></h1>
+        <p>Offres signalées par la Marketplace. Le prix et le stock sont vérifiés à l’ouverture de la fiche.</p>
+      </div>
+      <div class="promo-controls">
+        <label><span class="sr-only">Catégorie des promotions</span><select id="promoCategory"><option value="">Toute la sélection</option><option value="ecouteurs-et-enceintes">Écouteurs & enceintes</option><option value="montres-connectees">Montres connectées</option><option value="coques">Coques</option><option value="charge">Charge</option><option value="objets-connectes">Objets connectés</option></select></label>
+        <button id="loadPromos" class="primary" type="button">Voir les offres</button>
+      </div>
+      <div id="promoStatus" class="status hidden" role="status"></div>
+      <div id="promos" class="product-list"></div>
+    </section>
+
+    <section id="compareView" class="view" aria-labelledby="compareHeading">
+      <div class="compare-intro"><span class="section-kicker">Jusqu’à 4 produits</span><h1 id="compareHeading">Comparer sans<br><em>mélanger.</em></h1><p>Prix confirmés, vendeurs et caractéristiques réunis côte à côte.</p></div>
+      <div id="compareStatus" class="status hidden" role="status"></div>
+      <div id="compareContent"></div>
+    </section>
+
+    <section id="detailView" class="view detail-view" aria-live="polite">
+      <div id="detailStatus" class="status hidden" role="status"></div>
+      <div id="detailContent"></div>
+    </section>
+  </main>
+
+  <nav id="tabBar" class="tab-bar" aria-label="Navigation principale">
+    <button class="tab active" data-view="searchView" type="button" aria-current="page"><span aria-hidden="true">⌕</span><b>Rechercher</b></button>
+    <button class="tab" data-view="promoView" type="button"><span aria-hidden="true">%</span><b>Promos</b></button>
+    <button class="tab" data-view="compareView" type="button"><span aria-hidden="true">⇄</span><b>Comparer</b><i id="compareBadge" class="badge hidden">0</i></button>
+  </nav>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
