@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f5edda" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111914" media="(prefers-color-scheme: dark)">
+  <title>Snake</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Snake</h1>
+  </header>
+
+  <main class="game-shell">
+    <section class="scoreboard" aria-label="Scores">
+      <div class="score-item">
+        <span class="score-label">Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="score-divider" aria-hidden="true"></div>
+      <div class="score-item score-item-best">
+        <span class="score-label">Record</span>
+        <strong id="bestScore">0</strong>
+      </div>
+    </section>
+
+    <section class="board-wrap" aria-label="Plateau de jeu">
+      <canvas id="board" role="img" aria-label="Grille de Snake. Score actuel : 0."></canvas>
+      <div class="game-overlay" id="overlay">
+        <div class="overlay-mark" aria-hidden="true">●</div>
+        <h2 id="overlayTitle">Prêt ?</h2>
+        <p id="overlayText">Mangez les fruits, évitez les murs.</p>
+        <button type="button" id="startButton">Jouer</button>
+      </div>
+    </section>
+
+    <p class="game-message" id="gameMessage" aria-live="polite">Utilisez les quatre flèches pour diriger le serpent.</p>
+
+    <nav class="dpad" aria-label="Commandes de direction">
+      <button class="direction up" type="button" data-direction="up" aria-label="Diriger vers le haut"><span aria-hidden="true">↑</span></button>
+      <button class="direction left" type="button" data-direction="left" aria-label="Diriger vers la gauche"><span aria-hidden="true">←</span></button>
+      <div class="dpad-center" aria-hidden="true"><span></span></div>
+      <button class="direction right" type="button" data-direction="right" aria-label="Diriger vers la droite"><span aria-hidden="true">→</span></button>
+      <button class="direction down" type="button" data-direction="down" aria-label="Diriger vers le bas"><span aria-hidden="true">↓</span></button>
+    </nav>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

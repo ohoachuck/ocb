@@ -1,0 +1,29 @@
+{
+  "author" : {
+    "name" : "Toto"
+  },
+  "category" : "games",
+  "createdBy" : {
+    "promptVersion" : "20",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "gamecontroller.fill",
+    "tint" : "green"
+  },
+  "id" : "DD1B4BDC-28F8-4139-94FA-219DE6BF7CC5",
+  "mcp" : [
+
+  ],
+  "name" : "Snake",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+
+  ],
+  "schemaVersion" : 1,
+  "summary" : "Un jeu Snake simple sur iPhone, piloté avec quatre boutons à l’écran.",
+  "version" : 2
+}

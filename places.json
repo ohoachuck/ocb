@@ -1,0 +1,13 @@
+{
+  "apps": {
+    "snake": [
+      {
+        "label": "33 Rue Perrotin — Châtillon",
+        "lat": 48.80116004753166,
+        "lon": 2.2953172438447726,
+        "radius": 150
+      }
+    ]
+  },
+  "schemaVersion": 1
+}
