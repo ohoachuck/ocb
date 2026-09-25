@@ -124,6 +124,39 @@
       "summary" : "Une app pour rechercher, comparer et découvrir les promotions des produits vendus sur la Marketplace Orange, avec des images nettes et bien visibles.",
       "updated" : "2026-09-24",
       "version" : 3
+    },
+    {
+      "author" : {
+        "email" : "olivier.hoachuck@gmail.com",
+        "name" : "Olivier HO-A-CHUCK",
+        "website" : "https://blog.hoachuck.biz"
+      },
+      "category" : "finance",
+      "icon" : {
+        "symbol" : "house.fill",
+        "tint" : "blue"
+      },
+      "iconImage" : "icon.jpg",
+      "mcp" : [
+        "io.github.OneNicolas/service-public",
+        "io.github.cturkieh/france-data"
+      ],
+      "name" : "Estimation immobilière",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+        "share.present"
+      ],
+      "shots" : [
+        "shots/1.jpg",
+        "shots/2.jpg",
+        "shots/3.jpg"
+      ],
+      "slug" : "estimation-immobiliere",
+      "summary" : "Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.",
+      "updated" : "2026-09-25",
+      "version" : 7
     }
   ],
   "publisher" : {

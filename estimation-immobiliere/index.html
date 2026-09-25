@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f3ed">
+  <title>Estimation immobilière</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">⌂</div>
+    <div>
+      <p class="eyebrow">REPÈRE LOCAL</p>
+      <h1>Estimation immobilière</h1>
+    </div>
+    <button class="icon-button" id="shareHeader" aria-label="Partager l’application" title="Partager">↗</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="screen active" id="estimateScreen" aria-labelledby="estimateTitle">
+      <div class="intro">
+        <p class="kicker">France · estimation indicative</p>
+        <h2 id="estimateTitle">Quel est le juste repère<br><em>pour votre bien&nbsp;?</em></h2>
+        <p class="intro-copy">Une estimation claire à partir de votre secteur, des caractéristiques du logement et de repères de ventes.</p>
+      </div>
+
+      <form id="estimateForm" novalidate>
+        <fieldset class="panel address-panel">
+          <legend>Localisation</legend>
+          <label for="address">Adresse en France</label>
+          <div class="input-wrap"><span aria-hidden="true">⌖</span><input id="address" name="address" autocomplete="street-address" placeholder="12 rue des Lilas, 69002 Lyon" required></div>
+          <p class="hint">La commune et le secteur suffisent pour un premier repère.</p>
+        </fieldset>
+
+        <fieldset class="panel">
+          <legend>Votre bien</legend>
+          <div class="segmented" role="group" aria-label="Type de bien">
+            <button type="button" class="segment selected" data-type="appartement" aria-pressed="true"><span>▦</span> Appartement</button>
+            <button type="button" class="segment" data-type="maison" aria-pressed="false"><span>⌂</span> Maison</button>
+          </div>
+          <div class="field-grid">
+            <div><label for="surface">Surface habitable</label><div class="unit-input"><input id="surface" inputmode="decimal" type="number" min="9" max="1000" placeholder="65" required><span>m²</span></div></div>
+            <div><label for="rooms">Pièces</label><select id="rooms"><option value="1">1 pièce</option><option value="2">2 pièces</option><option value="3" selected>3 pièces</option><option value="4">4 pièces</option><option value="5">5 pièces</option><option value="6">6 pièces et +</option></select></div>
+          </div>
+          <label for="condition">État général</label>
+          <select id="condition"><option value="renover">À rénover</option><option value="rafraichir">À rafraîchir</option><option value="bon" selected>Bon état</option><option value="excellent">Très bon état / rénové</option></select>
+          <div id="extraFields" class="extra-fields"></div>
+        </fieldset>
+
+        <label class="remember"><input type="checkbox" id="keepHistory" checked><span class="checkmark">✓</span><span>Conserver cette estimation dans mon historique</span></label>
+        <button class="primary-button" type="submit"><span>Calculer mon estimation</span><b>→</b></button>
+        <p class="privacy-note">Calcul local sur l’appareil · aucune adresse envoyée</p>
+      </form>
+    </section>
+
+    <section class="screen" id="resultScreen" aria-labelledby="resultTitle">
+      <button class="back-link" id="newEstimate">← Nouvelle estimation</button>
+      <div class="result-head"><p class="kicker">Votre repère de valeur</p><h2 id="resultTitle">Estimation terminée</h2><p id="resultAddress" class="muted"></p></div>
+      <article class="hero-result">
+        <div><span class="result-label">Fourchette estimée</span><strong id="priceRange">—</strong><span id="pricePerM2" class="price-m2">— / m²</span></div>
+        <div class="confidence"><span class="confidence-dot"></span><span>Repère indicatif</span></div>
+      </article>
+      <div class="metrics"><div><span>Valeur centrale</span><strong id="centralPrice">—</strong></div><div><span>Surface</span><strong id="resultSurface">—</strong></div><div><span>Type</span><strong id="resultType">—</strong></div></div>
+      <div class="actions-row"><button class="secondary-button" id="shareResult">↗ Partager le résultat</button></div>
+      <article class="info-block"><div class="block-title"><span class="mini-icon">▤</span><div><h3>Repères du secteur</h3><p id="sectorSubtitle">Transactions et données communales</p></div></div><div id="sectorData" class="sector-content"></div></article>
+      <article class="notice"><span>i</span><p>Cette estimation est indicative. Les données embarquées servent de repères et ne remplacent pas une expertise, une visite ou les données DVF à jour.</p></article>
+    </section>
+
+    <section class="screen" id="historyScreen" aria-labelledby="historyTitle">
+      <div class="page-heading"><p class="kicker">Vos repères</p><h2 id="historyTitle">Historique</h2><p>Les estimations que vous avez choisi de conserver restent sur cet appareil.</p></div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <section class="screen" id="aboutScreen" aria-labelledby="aboutTitle">
+      <div class="page-heading"><p class="kicker">Comprendre le résultat</p><h2 id="aboutTitle">À propos</h2></div>
+      <article class="about-card accent"><span class="about-symbol">✦</span><h3>Un repère, pas une promesse</h3><p>L’adresse identifie la commune et donne une première lecture du secteur. Le prix dépend aussi de la rue, de la luminosité, des travaux et de nombreux détails observés sur place.</p></article>
+      <article class="about-card"><h3>Comment est calculé le prix&nbsp;?</h3><p>Un prix médian au m² est ajusté selon le type de bien, sa surface, son nombre de pièces et son état. Les repères communaux présentés sont indicatifs et consultables sans connexion.</p><div class="source-line"><span>◎</span> Service Public · transactions immobilières</div></article>
+      <article class="about-card"><h3>Vos données</h3><p>Vos estimations sont conservées uniquement si vous cochez la case dédiée. Rien n’est envoyé depuis cette application.</p></article>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Navigation principale">
+    <button class="tab active" data-screen="estimateScreen"><span>⌂</span><small>Estimer</small></button>
+    <button class="tab" data-screen="historyScreen"><span>◷</span><small>Historique</small></button>
+    <button class="tab" data-screen="aboutScreen"><span>✦</span><small>À propos</small></button>
+  </nav>
+  <script src="app.js"></script>
+</body>
+</html>
