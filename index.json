@@ -157,32 +157,6 @@
       "summary" : "Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.",
       "updated" : "2026-09-25",
       "version" : 7
-    },
-    {
-      "category" : "sports",
-      "icon" : {
-        "symbol" : "stopwatch.fill",
-        "tint" : "blue"
-      },
-      "mcp" : [
-
-      ],
-      "name" : "Calculateur de splits 400 m",
-      "networkOrigins" : [
-
-      ],
-      "permissions" : [
-
-      ],
-      "shots" : [
-        "shots/1.jpg",
-        "shots/2.jpg",
-        "shots/3.jpg"
-      ],
-      "slug" : "calculateur-de-splits-400-m",
-      "summary" : "Calcule les temps de passage tous les 400 mètres et selon une distance de split personnalisée saisie par l’utilisateur, à partir d’une distance et d’un temps total.",
-      "updated" : "2026-09-25",
-      "version" : 2
     }
   ],
   "publisher" : {
