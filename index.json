@@ -191,9 +191,13 @@
       "version" : 6
     },
     {
+      "author" : {
+        "email" : "olivier.hoachuck@gmail.com",
+        "name" : "Olivier HO-A-CHUCK"
+      },
       "category" : "productivity",
       "icon" : {
-        "symbol" : "star.fill",
+        "symbol" : "note.text",
         "tint" : "blue"
       },
       "iconImage" : "icon.jpg",
@@ -205,18 +209,22 @@
 
       ],
       "permissions" : [
+        "files.pick",
         "share.present",
-        "document.export",
-        "files.pick"
+        "document.export"
       ],
       "shots" : [
         "shots/1.jpg",
-        "shots/2.jpg"
+        "shots/2.jpg",
+        "shots/3.jpg",
+        "shots/4.jpg",
+        "shots/5.jpg",
+        "shots/6.jpg"
       ],
       "slug" : "createur-de-devis",
-      "summary" : "Créer, enregistrer, modifier, prévisualiser et partager des devis professionnels au format PDF.",
+      "summary" : "Créer, gérer, prévisualiser, exporter et partager des devis professionnels en PDF avec historique local.",
       "updated" : "2026-09-29",
-      "version" : 12
+      "version" : 20
     }
   ],
   "publisher" : {

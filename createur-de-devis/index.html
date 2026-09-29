@@ -45,10 +45,11 @@
       <form id="quoteForm">
         <div class="form-card">
           <div class="section-title">Informations</div>
-          <div class="two-col"><label>Référence<input name="reference" required></label><label>Date<input name="date" type="date" required></label></div>
+          <label>Référence<input name="reference" required></label><label>Date<input name="date" type="date" required></label>
           <label>Validité (jours)<input name="validity" type="number" min="1" value="30" required></label>
         </div>
         <div class="form-card"><div class="section-title">Votre client</div>
+          <label>Société destinatrice<input name="recipientCompany" required placeholder="Nom de la société destinataire"></label>
           <label>Nom / entreprise<input name="clientName" required placeholder="Nom du client"></label>
           <label>Email <span class="optional">facultatif</span><input name="clientEmail" type="email" placeholder="client@exemple.fr"></label>
           <label>Adresse <span class="optional">facultatif</span><textarea name="clientAddress" rows="2" placeholder="Adresse de facturation"></textarea></label>

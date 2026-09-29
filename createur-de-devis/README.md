@@ -1,16 +1,24 @@
 # Créateur de devis
 
-Créer, enregistrer, modifier, prévisualiser et partager des devis professionnels au format PDF.
+Créer, gérer, prévisualiser, exporter et partager des devis professionnels en PDF avec historique local.
 
 ![Capture](shots/1.jpg)
 
 ![Capture](shots/2.jpg)
 
+![Capture](shots/3.jpg)
+
+![Capture](shots/4.jpg)
+
+![Capture](shots/5.jpg)
+
+![Capture](shots/6.jpg)
+
 ## Ce que cette app demande
 
+- `files.pick`
 - `share.present`
 - `document.export`
-- `files.pick`
 
 ## Ce qu’elle peut contacter
 
