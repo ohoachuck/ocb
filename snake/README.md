@@ -1,10 +1,12 @@
 # Snake
 
-Un jeu Snake simple sur iPhone, piloté avec quatre boutons à l’écran.
+Un jeu Snake simple, piloté avec quatre boutons à l’écran.
 
 ![Capture](shots/1.jpg)
 
 ![Capture](shots/2.jpg)
+
+![Capture](shots/3.jpg)
 
 ## Ce que cette app demande
 

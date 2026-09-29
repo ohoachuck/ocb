@@ -257,8 +257,10 @@ function updateCanvasLabel() {
 startButton.addEventListener("click", startGame);
 
 directionButtons.forEach(button => {
-  button.addEventListener("click", () => setDirection(button.dataset.direction));
-  button.addEventListener("pointerdown", () => button.classList.add("active"));
+  button.addEventListener("pointerdown", () => {
+    button.classList.add("active");
+    setDirection(button.dataset.direction);
+  });
   const release = () => button.classList.remove("active");
   button.addEventListener("pointerup", release);
   button.addEventListener("pointercancel", release);
