@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#15131b">
+  <title>Créateur de devis</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">✦</div><h1 id="pageTitle">Devis</h1>
+    <button class="icon-btn" id="headerAction" aria-label="Nouveau devis">＋</button>
+  </header>
+  <main id="app" class="scroll-area">
+    <section id="homeView" class="view active" aria-labelledby="homeHeading">
+      <div class="hero"><p class="eyebrow">VOTRE ATELIER</p><h2 id="homeHeading">Des devis qui<br><em>font bonne impression.</em></h2><p class="muted">Créez, retrouvez et partagez vos propositions en quelques gestes.</p></div>
+      <button class="primary large" id="newQuoteBtn">Créer un devis <span>→</span></button>
+      <div class="section-head"><h3>Derniers devis</h3><button class="text-btn" data-tab="history">Tout voir</button></div>
+      <div id="recentQuotes" class="stack"></div>
+    </section>
+    <section id="historyView" class="view" aria-labelledby="historyHeading">
+      <div class="view-intro"><p class="eyebrow">ARCHIVES LOCALES</p><h2 id="historyHeading">Historique</h2><p class="muted">Vos devis restent sur cet appareil.</p></div>
+      <div id="allQuotes" class="stack"></div>
+    </section>
+    <section id="companyView" class="view" aria-labelledby="companyHeading">
+      <div class="view-intro"><p class="eyebrow">VOS COORDONNÉES</p><h2 id="companyHeading">Mon entreprise</h2><p class="muted">Ces informations apparaîtront automatiquement sur vos devis.</p></div>
+      <form id="companyForm" class="form-card">
+        <label>Nom de l’entreprise<input name="name" autocomplete="organization" required placeholder="Atelier Martin"></label>
+        <label>Adresse du siège social<input name="address" autocomplete="street-address" placeholder="12 rue des Lilas"></label>
+        <div class="two-col"><label>Code postal<input name="zip" inputmode="numeric" placeholder="75011"></label><label>Ville<input name="city" placeholder="Paris"></label></div>
+        <label>Email de contact<input name="email" type="email" autocomplete="email" placeholder="bonjour@atelier.fr"></label>
+        <label>Téléphone<input name="phone" type="tel" autocomplete="tel" placeholder="06 00 00 00 00"></label>
+        <label>SIRET <span class="optional">facultatif</span><input name="siret" inputmode="numeric" placeholder="123 456 789 00012"></label>
+        <label>Numéro de TVA <span class="optional">facultatif</span><input name="vatNumber" placeholder="FR 12 123456789"></label>
+        <div class="two-col"><label>Forme juridique <span class="optional">facultatif</span><input name="legalForm" placeholder="SARL, SAS…"></label><label>Capital <span class="optional">facultatif</span><input name="capital" placeholder="10 000 €"></label></div>
+        <label>Logo de l’entreprise <span class="optional">fichier importé uniquement</span><input type="button" id="logoPicker" value="Choisir un logo"></label>
+        <p id="logoName" class="saved-note" role="status"></p>
+        <button class="primary" type="submit">Enregistrer mes coordonnées</button><p id="companySaved" class="saved-note" role="status"></p>
+      </form>
+    </section>
+    <section id="editorView" class="view" aria-labelledby="editorHeading">
+      <div class="editor-top"><button class="back-btn" id="cancelEdit">‹ <span>Retour</span></button><span id="editLabel">NOUVEAU DEVIS</span></div>
+      <h2 id="editorHeading">Composer le devis</h2>
+      <form id="quoteForm">
+        <div class="form-card">
+          <div class="section-title">Informations</div>
+          <div class="two-col"><label>Référence<input name="reference" required></label><label>Date<input name="date" type="date" required></label></div>
+          <label>Validité (jours)<input name="validity" type="number" min="1" value="30" required></label>
+        </div>
+        <div class="form-card"><div class="section-title">Votre client</div>
+          <label>Nom / entreprise<input name="clientName" required placeholder="Nom du client"></label>
+          <label>Email <span class="optional">facultatif</span><input name="clientEmail" type="email" placeholder="client@exemple.fr"></label>
+          <label>Adresse <span class="optional">facultatif</span><textarea name="clientAddress" rows="2" placeholder="Adresse de facturation"></textarea></label>
+        </div>
+        <div class="form-card"><div class="section-title">Prestations ou produits</div><div id="lineItems"></div><button type="button" class="outline add-line" id="addLine">＋ Ajouter une ligne</button></div>
+        <div class="form-card totals-card">
+          <div class="two-col"><label>Remise (%)<input name="discount" type="number" min="0" max="100" step="0.1" value="0"></label><label>TVA (%)<input name="vat" type="number" min="0" max="100" step="0.1" value="20"></label></div>
+          <div id="liveTotals" class="totals"></div>
+        </div>
+        <div class="form-card"><div class="section-title">Conditions</div><label>Conditions de paiement<textarea name="terms" rows="3" placeholder="Paiement à 30 jours à réception de facture."></textarea></label><label>Note <span class="optional">facultatif</span><textarea name="note" rows="2" placeholder="Merci pour votre confiance."></textarea></label></div>
+        <button class="primary large" type="submit">Enregistrer le devis <span>→</span></button>
+      </form>
+    </section>
+    <section id="detailView" class="view" aria-labelledby="detailHeading">
+      <div class="editor-top"><button class="back-btn" id="closeDetail">‹ <span>Retour</span></button><div class="detail-actions"><button class="small-btn" id="shareQuote">Partager la preview</button><button class="small-btn" id="savePdf">PDF</button></div></div>
+      <div id="detailContent"></div>
+    </section>
+  </main>
+  <nav class="tabbar" aria-label="Navigation principale"><button class="tab active" data-tab="home"><span>⌂</span>Accueil</button><button class="tab" data-tab="history"><span>▤</span>Historique</button><button class="tab" data-tab="company"><span>◌</span>Entreprise</button></nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

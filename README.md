@@ -14,4 +14,5 @@ Sous licence MIT.
 - **[Orange Marketplace](orange-marketplace/)** — Une app pour rechercher, comparer et découvrir les promotions des produits vendus sur la Marketplace Orange, avec des images nettes et bien visibles.
 - **[Estimation immobilière](estimation-immobiliere/)** — Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.
 - **[Tetris Sonique](tetris-sonique/)** — Un Tetris classique jouable sur iPhone avec des contrôles tactiles réactifs, du son, une musique désactivable séparément, un arrière-plan animé léger et la sauvegarde automatique de la partie en cours.
+- **[Créateur de devis](createur-de-devis/)** — Créer, enregistrer, modifier, prévisualiser et partager des devis professionnels au format PDF.
 <!-- fin de la liste -->

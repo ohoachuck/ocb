@@ -187,6 +187,34 @@
       "summary" : "Un Tetris classique jouable sur iPhone avec des contrôles tactiles réactifs, du son, une musique désactivable séparément, un arrière-plan animé léger et la sauvegarde automatique de la partie en cours.",
       "updated" : "2026-09-26",
       "version" : 6
+    },
+    {
+      "category" : "productivity",
+      "icon" : {
+        "symbol" : "star.fill",
+        "tint" : "blue"
+      },
+      "iconImage" : "icon.jpg",
+      "mcp" : [
+
+      ],
+      "name" : "Créateur de devis",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+        "share.present",
+        "document.export",
+        "files.pick"
+      ],
+      "shots" : [
+        "shots/1.jpg",
+        "shots/2.jpg"
+      ],
+      "slug" : "createur-de-devis",
+      "summary" : "Créer, enregistrer, modifier, prévisualiser et partager des devis professionnels au format PDF.",
+      "updated" : "2026-09-29",
+      "version" : 12
     }
   ],
   "publisher" : {

@@ -1,0 +1,28 @@
+{
+  "category" : "productivity",
+  "createdBy" : {
+    "promptVersion" : "22",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "star.fill",
+    "tint" : "blue"
+  },
+  "id" : "3D26CAFC-6232-4481-AE43-E83CB06808E6",
+  "mcp" : [
+
+  ],
+  "name" : "Créateur de devis",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+    "share.present",
+    "document.export",
+    "files.pick"
+  ],
+  "schemaVersion" : 1,
+  "summary" : "Créer, enregistrer, modifier, prévisualiser et partager des devis professionnels au format PDF.",
+  "version" : 12
+}
