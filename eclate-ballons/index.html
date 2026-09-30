@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#090b2a">
+  <title>Éclate-Ballons</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" aria-label="Jeu Éclate-Ballons">
+    <header class="hud" aria-label="État de la partie">
+      <div class="metric">
+        <span class="metric-label">Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="brand" aria-hidden="true">
+        <span class="brand-balloon"></span>
+        <span>Éclate-Ballons</span>
+      </div>
+      <div class="metric metric-right">
+        <span class="metric-label">Niveau</span>
+        <strong id="level">1</strong>
+      </div>
+      <div id="lives" class="lives" role="img" aria-label="3 vies restantes">
+        <span>♥</span><span>♥</span><span>♥</span>
+      </div>
+      <button id="sound" class="sound-toggle" type="button" aria-label="Couper le son" aria-pressed="false">♪</button>
+    </header>
+
+    <section id="game" class="game" aria-label="Aire de jeu">
+      <div class="stars stars-a" aria-hidden="true"></div>
+      <div class="stars stars-b" aria-hidden="true"></div>
+      <div class="horizon" aria-hidden="true"></div>
+
+      <section id="intro" class="overlay visible" aria-labelledby="intro-title">
+        <div class="panel">
+          <div class="hero-balloons" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+          <p class="eyebrow">Prêt pour le ciel nocturne ?</p>
+          <h1 id="intro-title">Éclate-les<br>avant qu’ils filent !</h1>
+          <p class="instructions">Touche chaque ballon qui monte. Un ballon échappé coûte une vie.</p>
+          <div class="best-line">Meilleur score <strong id="best-intro">0</strong></div>
+          <button id="start" class="primary" type="button">Jouer</button>
+        </div>
+      </section>
+
+      <section id="gameover" class="overlay" aria-labelledby="gameover-title" hidden>
+        <div class="panel result-panel">
+          <div class="result-icon" aria-hidden="true">★</div>
+          <p class="eyebrow">Partie terminée</p>
+          <h2 id="gameover-title">Bien joué !</h2>
+          <div class="result-grid">
+            <div><span>Score final</span><strong id="final-score">0</strong></div>
+            <div><span>Niveau atteint</span><strong id="final-level">1</strong></div>
+          </div>
+          <p id="record-message" class="record-message"></p>
+          <p class="best-line">Meilleur score <strong id="best-final">0</strong></p>
+          <button id="replay" class="primary" type="button">Rejouer</button>
+        </div>
+      </section>
+
+      <section id="pause" class="overlay pause-overlay" aria-labelledby="pause-title" hidden>
+        <div class="panel compact-panel">
+          <h2 id="pause-title">En pause</h2>
+          <button id="resume" class="primary" type="button">Reprendre</button>
+        </div>
+      </section>
+    </section>
+    <p id="announcer" class="sr-only" aria-live="polite"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "author" : {
+    "email" : "olivier.hoachuck@gmail.com",
+    "name" : "Olivier HO-A-CHUCK"
+  },
+  "createdBy" : {
+    "promptVersion" : "20",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "gamecontroller.fill",
+    "tint" : "indigo"
+  },
+  "id" : "79B1FAD5-6BEC-4CCD-9F34-BC8B0018EDB2",
+  "mcp" : [
+
+  ],
+  "name" : "Éclate-Ballons",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+
+  ],
+  "schemaVersion" : 1,
+  "summary" : "Un jeu tactile où des ballons montent à l’écran et doivent être éclatés avant de s’échapper.",
+  "version" : 2
+}
