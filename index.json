@@ -162,6 +162,42 @@
       "summary" : "Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.",
       "updated" : "2026-09-30",
       "version" : 8
+    },
+    {
+      "author" : {
+        "email" : "olivier.hoachuck@gmail.com",
+        "name" : "Olivier HO-A-CHUCK"
+      },
+      "category" : "productivity",
+      "icon" : {
+        "symbol" : "star.fill",
+        "tint" : "blue"
+      },
+      "iconImage" : "icon.jpg",
+      "mcp" : [
+
+      ],
+      "name" : "Créateur de devis",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+        "files.pick",
+        "share.present",
+        "document.export"
+      ],
+      "shots" : [
+        "shots/1.jpg",
+        "shots/2.jpg",
+        "shots/3.jpg",
+        "shots/4.jpg",
+        "shots/5.jpg",
+        "shots/6.jpg"
+      ],
+      "slug" : "createur-de-devis",
+      "summary" : "Créer, gérer, prévisualiser, exporter et partager des devis professionnels en PDF avec historique local.",
+      "updated" : "2026-09-30",
+      "version" : 1
     }
   ],
   "publisher" : {
