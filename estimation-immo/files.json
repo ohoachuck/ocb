@@ -1,0 +1,29 @@
+{
+  "files" : [
+    {
+      "bytes" : 22307,
+      "path" : "app.js",
+      "sha256" : "e5ac573ffd5520ac482329d362362f0b0d771cd0094c102584dc8bde30bfda09"
+    },
+    {
+      "bytes" : 19958,
+      "path" : "district.js",
+      "sha256" : "5a9ebc3ae07ff023055caac9641845a89a8d0f6388a27db596f10c2dd908f4e8"
+    },
+    {
+      "bytes" : 8164,
+      "path" : "index.html",
+      "sha256" : "676c1b50f512989f71ae36b49c517c9de464715f29e129a08b2818df9422ab87"
+    },
+    {
+      "bytes" : 920,
+      "path" : "manifest.json",
+      "sha256" : "bfb3f8a1ade5e4894b29444f0cc9e3e7fa8dc888700a1c10efda0c1e56ad409b"
+    },
+    {
+      "bytes" : 11974,
+      "path" : "style.css",
+      "sha256" : "1dd098c8dbd22e3bb589f3490920a86d9a77c1b320be394d9dd9b61456b38ca9"
+    }
+  ]
+}

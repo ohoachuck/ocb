@@ -12,4 +12,5 @@ Sous licence MIT.
 - **[Ballons Confettis](ballons-confettis/)** — Cette application permet de jouer à un jeu d’arcade hors ligne où l’on éclate des ballons dessinés pour atteindre un score. Elle affiche un écran d’accueil avec le meilleur score et un bouton pour commencer.
 - **[Snake](snake/)** — Un jeu Snake simple, piloté avec quatre boutons à l’écran.
 - **[Éclate-Ballons](eclate-ballons/)** — Un jeu tactile où des ballons montent à l’écran et doivent être éclatés avant de s’échapper.
+- **[Estimation immo](estimation-immo/)** — Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.
 <!-- fin de la liste -->

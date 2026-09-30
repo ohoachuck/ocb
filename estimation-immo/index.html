@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f3ed">
+  <title>Estimation immobilière</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">⌂</div>
+    <div>
+      <p class="eyebrow">REPÈRE LOCAL</p>
+      <h1>Estimation immobilière</h1>
+    </div>
+    <button class="icon-button" id="shareHeader" aria-label="Partager l’application" title="Partager">↗</button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="screen active" id="estimateScreen" aria-labelledby="estimateTitle">
+      <div class="intro">
+        <p class="kicker">France · estimation indicative</p>
+        <h2 id="estimateTitle">Quel est le juste repère<br><em>pour votre bien&nbsp;?</em></h2>
+        <p class="intro-copy">Une estimation à partir des ventes officielles de votre quartier et de votre commune, ajustée selon les caractéristiques du logement.</p>
+      </div>
+
+      <form id="estimateForm" novalidate>
+        <fieldset class="panel address-panel">
+          <legend>Localisation</legend>
+          <label for="address">Adresse en France</label>
+          <div class="input-wrap"><span aria-hidden="true">⌖</span><input id="address" name="address" autocomplete="street-address" placeholder="12 rue des Lilas, 69002 Lyon" required></div>
+          <p class="hint">Le numéro et la rue permettent de trouver le quartier : les prix y sont souvent très différents de la moyenne de la commune.</p>
+        </fieldset>
+
+        <fieldset class="panel">
+          <legend>Votre bien</legend>
+          <div class="segmented" role="group" aria-label="Type de bien">
+            <button type="button" class="segment selected" data-type="appartement" aria-pressed="true"><span>▦</span> Appartement</button>
+            <button type="button" class="segment" data-type="maison" aria-pressed="false"><span>⌂</span> Maison</button>
+          </div>
+          <div class="field-grid">
+            <div><label for="surface">Surface habitable</label><div class="unit-input"><input id="surface" inputmode="decimal" type="number" min="9" max="1000" placeholder="65" required><span>m²</span></div></div>
+            <div><label for="rooms">Pièces</label><select id="rooms"><option value="1">1 pièce</option><option value="2">2 pièces</option><option value="3" selected>3 pièces</option><option value="4">4 pièces</option><option value="5">5 pièces</option><option value="6">6 pièces et +</option></select></div>
+          </div>
+          <label for="condition">État général</label>
+          <select id="condition"><option value="renover">À rénover</option><option value="rafraichir">À rafraîchir</option><option value="bon" selected>Bon état</option><option value="excellent">Très bon état / rénové</option></select>
+          <div id="extraFields" class="extra-fields"></div>
+        </fieldset>
+
+        <label class="remember"><input type="checkbox" id="keepHistory" checked><span class="checkmark">✓</span><span>Conserver cette estimation dans mon historique</span></label>
+        <button class="primary-button" type="submit"><span>Calculer mon estimation</span><b>→</b></button>
+        <p class="privacy-note">L’adresse est envoyée à France Data pour la situer, puis sa position au cadastre de l’IGN et à data.gouv.fr pour trouver les ventes du quartier.</p>
+      </form>
+    </section>
+
+    <section class="screen" id="resultScreen" aria-labelledby="resultTitle">
+      <button class="back-link" id="newEstimate">← Nouvelle estimation</button>
+      <div class="result-head"><p class="kicker">Votre repère de valeur</p><h2 id="resultTitle">Estimation terminée</h2><p id="resultAddress" class="muted"></p></div>
+      <article class="hero-result">
+        <div><span class="result-label">Fourchette estimée</span><strong id="priceRange">—</strong><span id="pricePerM2" class="price-m2">— / m²</span></div>
+        <div class="confidence"><span class="confidence-dot"></span><span>Repère indicatif</span></div>
+      </article>
+      <div class="metrics"><div><span>Valeur centrale</span><strong id="centralPrice">—</strong></div><div><span>Surface</span><strong id="resultSurface">—</strong></div><div><span>Type</span><strong id="resultType">—</strong></div></div>
+      <div class="actions-row"><button class="secondary-button" id="shareResult">↗ Partager le résultat</button></div>
+      <article class="info-block"><div class="block-title"><span class="mini-icon">▤</span><div><h3>Repères du secteur</h3><p id="sectorSubtitle">Transactions et données communales</p></div></div><div id="sectorData" class="sector-content"></div></article>
+      <article class="info-block" id="districtBlock" hidden><div class="block-title"><span class="mini-icon">▦</span><div><h3>Le quartier</h3><p>Prix médian au m² par section cadastrale</p></div></div><div id="districtData" class="sector-content"></div></article>
+      <article class="notice"><span>i</span><p>Cette estimation est indicative. Elle part des ventes officielles (DVF) publiées en statistiques, et ne remplace ni une visite ni l’avis d’un professionnel.</p></article>
+    </section>
+
+    <section class="screen" id="salesScreen" aria-labelledby="salesTitle">
+      <button class="back-link" id="salesBack">← Retour à l’estimation</button>
+      <div class="result-head"><p class="kicker">Ventes officielles (DVF)</p><h2 id="salesTitle">Ventes du quartier</h2><p id="salesAddress" class="muted"></p></div>
+      <div id="salesList"></div>
+    </section>
+
+    <section class="screen" id="historyScreen" aria-labelledby="historyTitle">
+      <div class="page-heading"><p class="kicker">Vos repères</p><h2 id="historyTitle">Historique</h2><p>Les estimations que vous avez choisi de conserver restent sur cet appareil.</p></div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <section class="screen" id="aboutScreen" aria-labelledby="aboutTitle">
+      <div class="page-heading"><p class="kicker">Comprendre le résultat</p><h2 id="aboutTitle">À propos</h2></div>
+      <article class="about-card accent"><span class="about-symbol">✦</span><h3>Un repère, pas une promesse</h3><p>L’adresse situe le bien dans sa section cadastrale, quelques pâtés de maisons. Le prix dépend aussi de l’étage, de la luminosité, des travaux et de nombreux détails observés sur place.</p></article>
+      <article class="about-card"><h3>Comment est calculé le prix&nbsp;?</h3><p>Le prix médian au m² des ventes officielles du quartier est pris pour base, ou celui de la commune quand le quartier compte moins de 10 ventes du même type. Il est ensuite ajusté selon l’état, le nombre de pièces et les atouts : ces ajustements sont des hypothèses de l’app, aucune donnée publique ne les mesure. Aucune source publique ne donne la liste des ventes une par une. Si une source ne répond pas, ou si les ventes sont trop peu nombreuses, l’app ne donne pas d’estimation plutôt qu’une estimation fausse.</p><div class="source-line"><span>◎</span> data.gouv.fr (Statistiques DVF) · cadastre IGN · France Data</div></article>
+      <article class="about-card"><h3>Vos données</h3><p>Vos estimations sont conservées sur cet appareil uniquement si vous cochez la case dédiée. Pour chercher les ventes, l’adresse et sa position sont envoyées à France Data, au cadastre de l’IGN et à data.gouv.fr.</p></article>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Navigation principale">
+    <button class="tab active" data-screen="estimateScreen"><span>⌂</span><small>Estimer</small></button>
+    <button class="tab" data-screen="historyScreen"><span>◷</span><small>Historique</small></button>
+    <button class="tab" data-screen="aboutScreen"><span>✦</span><small>À propos</small></button>
+  </nav>
+  <script src="district.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
