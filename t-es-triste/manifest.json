@@ -1,0 +1,30 @@
+{
+  "author" : {
+    "email" : "olivier.hoachuck@gmail.com",
+    "name" : "Olivier HO-A-CHUCK"
+  },
+  "category" : "games",
+  "createdBy" : {
+    "promptVersion" : "22",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "gamecontroller.fill",
+    "tint" : "purple"
+  },
+  "id" : "64AC58D7-BBC6-4178-8DE8-B03866C425B0",
+  "mcp" : [
+
+  ],
+  "name" : "T’es Triste",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+
+  ],
+  "schemaVersion" : 1,
+  "summary" : "Un Tetris classique jouable sur iPhone avec des contrôles tactiles réactifs, du son, une musique désactivable séparément, un arrière-plan animé léger et la sauvegarde automatique de la partie en cours.",
+  "version" : 1
+}

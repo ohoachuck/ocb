@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<title>Tetris Sonique</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">✦</span><div><h1>Tetris <em>Sonique</em></h1><p>Fais vibrer les lignes</p></div></div>
+  <button class="icon-button" id="pauseBtn" aria-label="Mettre en pause" title="Pause">Ⅱ</button>
+</header>
+<main>
+  <section class="hud" aria-label="Statistiques de la partie">
+    <div><span>Score</span><strong id="score">0</strong></div>
+    <div><span>Niveau</span><strong id="level">1</strong></div>
+    <div><span>Lignes</span><strong id="lines">0</strong></div>
+    <div class="best"><span>Record</span><strong id="best">0</strong></div>
+  </section>
+  <section class="game-layout">
+    <div class="board-wrap">
+      <canvas id="board" aria-label="Grille de jeu Tetris" role="img"></canvas>
+      <div class="overlay" id="overlay" hidden><div class="overlay-card"><span class="overlay-icon">Ⅱ</span><h2 id="overlayTitle">Pause</h2><p id="overlayText">La partie attend ton prochain mouvement.</p><button class="primary" id="resumeBtn">Reprendre</button></div></div>
+    </div>
+    <aside class="next-card" aria-label="Prochaine pièce"><span>À SUIVRE</span><canvas id="next" width="112" height="72"></canvas></aside>
+  </section>
+  <p class="hint" id="hint">Glisse pour déplacer · tape pour tourner</p>
+  <section class="controls" aria-label="Commandes de jeu">
+    <button class="control" id="leftBtn" aria-label="Déplacer à gauche">←</button>
+    <button class="control" id="downBtn" aria-label="Descendre la pièce">↓</button>
+    <button class="control rotate" id="rotateBtn" aria-label="Faire pivoter la pièce">↻</button>
+    <button class="control" id="rightBtn" aria-label="Déplacer à droite">→</button>
+    <button class="drop" id="dropBtn" aria-label="Faire tomber la pièce">DROP <small>ESPACE</small></button>
+  </section>
+  <section class="actions">
+    <button class="secondary" id="newBtn">＋ Nouvelle partie</button>
+    <div class="audio-actions"><button class="sound active" id="musicBtn" aria-pressed="true"><span>♫</span> Musique</button><button class="sound active" id="fxBtn" aria-pressed="true"><span>◈</span> Effets</button></div>
+  </section>
+  <p class="status" id="status" role="status" aria-live="polite">Prêt à jouer</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

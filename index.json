@@ -95,6 +95,37 @@
       "summary" : "Un jeu Snake simple, piloté avec quatre boutons à l’écran.",
       "updated" : "2026-09-29",
       "version" : 3
+    },
+    {
+      "author" : {
+        "email" : "olivier.hoachuck@gmail.com",
+        "name" : "Olivier HO-A-CHUCK"
+      },
+      "category" : "games",
+      "icon" : {
+        "symbol" : "gamecontroller.fill",
+        "tint" : "purple"
+      },
+      "iconImage" : "icon.jpg",
+      "mcp" : [
+
+      ],
+      "name" : "T’es Triste",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+
+      ],
+      "shots" : [
+        "shots/1.jpg",
+        "shots/2.jpg",
+        "shots/3.jpg"
+      ],
+      "slug" : "t-es-triste",
+      "summary" : "Un Tetris classique jouable sur iPhone avec des contrôles tactiles réactifs, du son, une musique désactivable séparément, un arrière-plan animé léger et la sauvegarde automatique de la partie en cours.",
+      "updated" : "2026-09-30",
+      "version" : 1
     }
   ],
   "publisher" : {
