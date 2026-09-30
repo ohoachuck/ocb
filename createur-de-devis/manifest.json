@@ -1,0 +1,32 @@
+{
+  "author" : {
+    "email" : "olivier.hoachuck@gmail.com",
+    "name" : "Olivier HO-A-CHUCK"
+  },
+  "category" : "productivity",
+  "createdBy" : {
+    "promptVersion" : "22",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "star.fill",
+    "tint" : "blue"
+  },
+  "id" : "EF4112A3-CC06-425E-A26D-3DE1B5F987FA",
+  "mcp" : [
+
+  ],
+  "name" : "Créateur de devis",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+    "files.pick",
+    "share.present",
+    "document.export"
+  ],
+  "schemaVersion" : 1,
+  "summary" : "Créer, gérer, prévisualiser, exporter et partager des devis professionnels en PDF avec historique local.",
+  "version" : 1
+}
