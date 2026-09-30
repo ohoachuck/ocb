@@ -11,5 +11,4 @@ Sous licence MIT.
 - **[Parle & Traduis](parle-traduis/)** — L’application permet d’écouter une phrase en français, d’afficher sa transcription puis de la traduire dans l’une des cinq langues disponibles(dont le Wolof). Elle permet de répéter l’expérience facilement.
 - **[Ballons Confettis](ballons-confettis/)** — Cette application permet de jouer à un jeu d’arcade hors ligne où l’on éclate des ballons dessinés pour atteindre un score. Elle affiche un écran d’accueil avec le meilleur score et un bouton pour commencer.
 - **[Snake](snake/)** — Un jeu Snake simple, piloté avec quatre boutons à l’écran.
-- **[Créateur de devis](createur-de-devis/)** — Créer, gérer, prévisualiser, exporter et partager des devis professionnels en PDF avec historique local.
 <!-- fin de la liste -->
