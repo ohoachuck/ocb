@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+:root {
+  --bg: #10131f; --panel: #191d2d; --panel-2: #23283c; --ink: #f6f3ee;
+  --muted: #a7abbc; --line: #343a51; --accent: #f4b35f; --accent-ink: #20160c;
+  --good: #7fe0ae; --bad: #ff8f87; --quiet: #757b91;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8f3ea; --panel: #fffdf8; --panel-2: #efe7da; --ink: #211e26;
+    --muted: #6d6871; --line: #ded4c6; --accent: #c66b36; --accent-ink: #fffaf4;
+    --good: #16754a; --bad: #b53e3b; --quiet: #827b78;
+  }
+}
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.45; overflow-x: hidden; }
+button, input { font: inherit; }
+button { user-select: none; -webkit-user-select: none; cursor: pointer; }
+.topbar { position: sticky; top: 0; z-index: 5; padding-top: env(safe-area-inset-top); background: var(--bg); user-select: none; -webkit-user-select: none; }
+.topbar-inner { height: 58px; display: flex; align-items: center; justify-content: center; padding: 0 18px; border-bottom: 1px solid var(--line); }
+.brand { font-weight: 700; letter-spacing: -.02em; display: flex; align-items: center; gap: 9px; }
+.brand-mark { color: var(--accent); font-size: 27px; line-height: 0; transform: rotate(-28deg); display: inline-block; }
+.icon-button { position: absolute; left: 12px; width: 44px; height: 44px; border: 0; background: transparent; color: var(--ink); font-size: 34px; font-weight: 300; line-height: 1; }
+.topbar-spacer { position: absolute; right: 18px; width: 18px; }
+main { max-width: 620px; margin: 0 auto; padding: 0 22px calc(42px + env(safe-area-inset-bottom)); }
+.view { padding-top: 46px; }
+.hidden { display: none !important; }
+.eyebrow { margin: 0 0 13px; color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+h1 { margin: 0; font-size: clamp(34px, 9vw, 52px); line-height: 1.03; letter-spacing: -.055em; font-weight: 780; }
+h1 em { color: var(--accent); font-style: normal; }
+.lead { margin: 18px 0 0; color: var(--muted); font-size: 16px; max-width: 500px; }
+.search-form { margin-top: 40px; }
+label { display: block; margin-bottom: 9px; font-size: 13px; font-weight: 750; }
+.input-wrap { display: flex; align-items: center; min-height: 58px; padding: 0 9px 0 17px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); transition: border-color .2s, box-shadow .2s; }
+.input-wrap:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+.input-symbol { color: var(--accent); font-size: 27px; margin-right: 10px; transform: rotate(-15deg); }
+input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 17px; }
+input::placeholder { color: var(--quiet); }
+.clear-button { flex: 0 0 40px; height: 40px; border: 0; border-radius: 50%; background: var(--panel-2); color: var(--muted); font-size: 25px; line-height: 1; }
+.hint { margin: 9px 3px 0; color: var(--muted); font-size: 12px; }
+.primary-button, .secondary-button { min-height: 52px; border: 0; border-radius: 14px; font-weight: 750; }
+.primary-button { width: 100%; margin-top: 22px; padding: 0 18px; display: flex; justify-content: space-between; align-items: center; background: var(--accent); color: var(--accent-ink); }
+.primary-button b { font-size: 24px; font-weight: 400; }
+.extension-note { margin-top: 29px; padding-top: 19px; border-top: 1px solid var(--line); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.note-label { color: var(--muted); font-size: 10px; letter-spacing: .15em; font-weight: 800; }
+.chips { display: flex; gap: 7px; flex-wrap: wrap; }
+.chips span { border: 1px solid var(--line); border-radius: 99px; padding: 4px 9px; color: var(--muted); font-size: 12px; }
+.extension-chip { display: inline-flex; align-items: center; gap: 5px; }
+.remove-extension { width: 20px; height: 20px; padding: 0; border: 0; border-radius: 50%; color: var(--muted); background: transparent; line-height: 1; }
+.extension-editor { display: flex; flex: 1 1 190px; min-width: 190px; height: 38px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); overflow: hidden; }
+.extension-editor input { min-width: 0; padding: 0 10px; font-size: 13px; }
+.add-extension { padding: 0 11px; border: 0; border-left: 1px solid var(--line); background: var(--panel-2); color: var(--ink); font-size: 12px; font-weight: 700; }
+.message { min-height: 24px; margin: 18px 0 0; color: var(--bad); font-size: 13px; }
+.cached-teaser { margin-top: 15px; padding: 14px 16px; border-left: 3px solid var(--accent); color: var(--muted); font-size: 13px; }
+.results-heading { margin-bottom: 22px; }
+.results-heading h1 { font-size: 42px; }
+.results-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; color: var(--muted); font-size: 13px; }
+.results-list { display: grid; gap: 7px; }
+.result-card { padding: 11px 13px 10px; border: 1px solid var(--line); border-radius: 13px; background: var(--panel); }
+.result-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.domain-name { font-size: 16px; font-weight: 750; overflow-wrap: anywhere; }
+.badge { flex: 0 0 auto; border-radius: 99px; padding: 4px 8px; font-size: 10px; font-weight: 800; letter-spacing: .02em; }
+.badge.available { color: var(--good); background: color-mix(in srgb, var(--good) 13%, transparent); }
+.badge.taken { color: var(--bad); background: color-mix(in srgb, var(--bad) 13%, transparent); }
+.badge.pending { color: var(--muted); background: var(--panel-2); }
+.result-detail { margin: 3px 0 0; color: var(--muted); font-size: 11px; line-height: 1.35; }
+.secondary-button { width: 100%; margin-top: 25px; background: var(--panel-2); color: var(--ink); border: 1px solid var(--line); }
+.secondary-button span { margin-right: 8px; color: var(--accent); font-size: 22px; vertical-align: -2px; }
+.source-note { margin: 25px 0 0; color: var(--quiet); text-align: center; font-size: 11px; }
+@media (max-width: 360px) { main { padding-left: 17px; padding-right: 17px; } .view { padding-top: 32px; } .result-top { display: block; } .badge { display: inline-block; margin-top: 6px; } }
+@media print { .topbar, .secondary-button { display: none !important; } }

@@ -198,6 +198,35 @@
       "summary" : "Créer, gérer, prévisualiser, exporter et partager des devis professionnels en PDF avec historique local.",
       "updated" : "2026-09-30",
       "version" : 1
+    },
+    {
+      "author" : {
+        "email" : "olivier.hoachuck@gmail.com",
+        "name" : "Olivier HO-A-CHUCK"
+      },
+      "category" : "utilities",
+      "icon" : {
+        "symbol" : "globe",
+        "tint" : "blue"
+      },
+      "mcp" : [
+        "io.github.KincaidYang/whois"
+      ],
+      "name" : "Disponibilité domaine",
+      "networkOrigins" : [
+
+      ],
+      "permissions" : [
+
+      ],
+      "shots" : [
+        "shots/1.jpg",
+        "shots/2.jpg"
+      ],
+      "slug" : "disponibilite-domaine",
+      "summary" : "Vérifier la disponibilité de domaines avec une recherche WHOIS/RDAP et afficher des résultats compacts et lisibles.",
+      "updated" : "2026-10-07",
+      "version" : 7
     }
   ],
   "publisher" : {

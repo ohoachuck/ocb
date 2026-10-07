@@ -1,0 +1,29 @@
+{
+  "files" : [
+    {
+      "bytes" : 11228,
+      "path" : "app.js",
+      "sha256" : "1cb70d6b95ad13705adb9fe9179086d08a276f244b2be617339adbb894740503"
+    },
+    {
+      "bytes" : 3341,
+      "path" : "index.html",
+      "sha256" : "2ee8a49c9bc6e10551efc8506670cb3df8c34b1881a1378d3219403e27b6709f"
+    },
+    {
+      "bytes" : 1318,
+      "path" : "manifest.json",
+      "sha256" : "39a4401615125a14f18fbe780e28d5a5340c3e5e346ff075ae1a9b6c29b33116"
+    },
+    {
+      "bytes" : 6824,
+      "path" : "skills.js",
+      "sha256" : "713157c3ddd6a0943ef1b9cb336b76c3d6f87d92af52a8792e884f1e075bf078"
+    },
+    {
+      "bytes" : 6394,
+      "path" : "style.css",
+      "sha256" : "84dab9319c484443ef764f308f04964ca4c1ccff2a5b40dca7d2ba28e011d6a2"
+    }
+  ]
+}

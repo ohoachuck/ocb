@@ -1,0 +1,51 @@
+{
+  "author" : {
+    "email" : "olivier.hoachuck@gmail.com",
+    "name" : "Olivier HO-A-CHUCK"
+  },
+  "category" : "utilities",
+  "createdBy" : {
+    "promptVersion" : "25",
+    "provider" : "llmproxy"
+  },
+  "entry" : "index.html",
+  "icon" : {
+    "symbol" : "globe",
+    "tint" : "blue"
+  },
+  "id" : "2F627427-954D-4A51-BC5E-59C20D1E4EB0",
+  "mcp" : [
+    "io.github.KincaidYang\/whois"
+  ],
+  "name" : "Disponibilité domaine",
+  "networkOrigins" : [
+
+  ],
+  "permissions" : [
+
+  ],
+  "schemaVersion" : 1,
+  "skills" : [
+    {
+      "description" : "Vérifie la disponibilité d’un radical avec les extensions configurées, ou d’un domaine complet sans lui ajouter d’extension. À utiliser pour rechercher un nom de domaine.",
+      "kind" : "read",
+      "name" : "rechercher_domaine",
+      "parameters" : {
+        "properties" : {
+          "saisie" : {
+            "description" : "Radical ou domaine complet à vérifier.",
+            "maxLength" : 253,
+            "type" : "string"
+          }
+        },
+        "required" : [
+          "saisie"
+        ],
+        "type" : "object"
+      },
+      "title" : "Rechercher un domaine"
+    }
+  ],
+  "summary" : "Vérifier la disponibilité de domaines avec une recherche WHOIS\/RDAP et afficher des résultats compacts et lisibles.",
+  "version" : 7
+}

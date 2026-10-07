@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#10131f">
+  <title>Disponibilité domaine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button id="backButton" class="icon-button hidden" type="button" aria-label="Retour à la recherche" title="Retour">‹</button>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">◌</span><span>Disponibilité domaine</span></div>
+      <span class="topbar-spacer" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <main>
+    <section id="searchView" class="view" aria-labelledby="searchTitle">
+      <div class="intro">
+        <p class="eyebrow">VÉRIFICATION WHOIS / RDAP</p>
+        <h1 id="searchTitle">Votre prochain nom<br><em>commence ici.</em></h1>
+        <p class="lead">Saisissez un radical pour explorer les extensions essentielles, ou un domaine complet pour une vérification ciblée.</p>
+      </div>
+      <form id="searchForm" class="search-form">
+        <label for="domainInput">Nom de domaine</label>
+        <div class="input-wrap">
+          <span class="input-symbol" aria-hidden="true">⌕</span>
+          <input id="domainInput" name="domain" type="text" inputmode="url" autocapitalize="none" autocomplete="off" spellcheck="false" placeholder="ex. atelier-lune ou atelier-lune.fr" required>
+          <button id="clearButton" class="clear-button hidden" type="button" aria-label="Effacer">×</button>
+        </div>
+        <p id="inputHint" class="hint">Sans extension, les 5 extensions par défaut seront testées.</p>
+        <button class="primary-button" type="submit"><span>Vérifier la disponibilité</span><b aria-hidden="true">→</b></button>
+      </form>
+      <div class="extension-note" aria-label="Extensions vérifiées pour les recherches de radicaux">
+        <span class="note-label">EXTENSIONS</span>
+        <span id="extensionChips" class="chips"></span>
+        <div class="extension-editor">
+          <input id="extensionInput" type="text" maxlength="64" inputmode="text" autocapitalize="none" autocomplete="off" spellcheck="false" placeholder=".dev" aria-label="Nouvelle extension">
+          <button id="addExtensionButton" class="add-extension" type="button">Ajouter</button>
+        </div>
+      </div>
+      <p id="searchMessage" class="message" role="status"></p>
+      <div id="cachedTeaser" class="cached-teaser hidden"></div>
+    </section>
+
+    <section id="resultsView" class="view hidden" aria-labelledby="resultsTitle">
+      <div class="results-heading">
+        <p class="eyebrow">RÉSULTATS DE LA RECHERCHE</p>
+        <h1 id="resultsTitle">Disponibilité</h1>
+        <p id="resultsSubtitle" class="lead"></p>
+      </div>
+      <div id="resultsMeta" class="results-meta"></div>
+      <div id="resultsList" class="results-list" aria-live="polite"></div>
+      <button id="newSearchButton" class="secondary-button" type="button"><span>⌕</span> Nouvelle recherche</button>
+      <p class="source-note">Réponse fournie par le service WHOIS / RDAP intégré.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

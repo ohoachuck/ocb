@@ -14,4 +14,5 @@ Sous licence MIT.
 - **[Éclate-Ballons](eclate-ballons/)** — Un jeu tactile où des ballons montent à l’écran et doivent être éclatés avant de s’échapper.
 - **[Estimation immo](estimation-immo/)** — Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.
 - **[Créateur de devis](createur-de-devis/)** — Créer, gérer, prévisualiser, exporter et partager des devis professionnels en PDF avec historique local.
+- **[Disponibilité domaine](disponibilite-domaine/)** — Vérifier la disponibilité de domaines avec une recherche WHOIS/RDAP et afficher des résultats compacts et lisibles.
 <!-- fin de la liste -->
