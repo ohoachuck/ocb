@@ -132,15 +132,15 @@
         "email" : "olivier.hoachuck@gmail.com",
         "name" : "Olivier HO-A-CHUCK"
       },
-      "category" : "finance",
+      "category" : "productivity",
+      "heroImage" : "hero.jpg",
       "icon" : {
-        "symbol" : "house.fill",
-        "tint" : "orange"
+        "symbol" : "chart.bar.fill",
+        "tint" : "blue"
       },
       "iconImage" : "icon.jpg",
       "mcp" : [
-        "io.github.cturkieh/france-data",
-        "fr.data.gouv/catalogue"
+
       ],
       "name" : "Estimation immo",
       "networkOrigins" : [
@@ -157,12 +157,13 @@
         "shots/3.jpg",
         "shots/4.jpg",
         "shots/5.jpg",
-        "shots/6.jpg"
+        "shots/6.jpg",
+        "shots/7.jpg"
       ],
       "slug" : "estimation-immo",
       "summary" : "Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.",
-      "updated" : "2026-09-30",
-      "version" : 8
+      "updated" : "2026-10-13",
+      "version" : 12
     },
     {
       "author" : {
