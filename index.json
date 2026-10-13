@@ -101,6 +101,7 @@
         "email" : "olivier.hoachuck@gmail.com",
         "name" : "Olivier HO-A-CHUCK"
       },
+      "heroImage" : "hero.jpg",
       "icon" : {
         "symbol" : "gamecontroller.fill",
         "tint" : "indigo"
@@ -123,7 +124,7 @@
       ],
       "slug" : "eclate-ballons",
       "summary" : "Un jeu tactile où des ballons montent à l’écran et doivent être éclatés avant de s’échapper.",
-      "updated" : "2026-09-30",
+      "updated" : "2026-10-13",
       "version" : 2
     },
     {
@@ -227,38 +228,6 @@
       "summary" : "Vérifier la disponibilité de domaines avec une recherche WHOIS/RDAP et afficher des résultats compacts et lisibles.",
       "updated" : "2026-10-07",
       "version" : 7
-    },
-    {
-      "author" : {
-        "email" : "olivier.hoachuck@gmail.com",
-        "name" : "Olivier HO-A-CHUCK"
-      },
-      "category" : "games",
-      "heroImage" : "hero.jpg",
-      "icon" : {
-        "symbol" : "gamecontroller.fill",
-        "tint" : "purple"
-      },
-      "iconImage" : "icon.jpg",
-      "mcp" : [
-
-      ],
-      "name" : "T’es Triste",
-      "networkOrigins" : [
-
-      ],
-      "permissions" : [
-
-      ],
-      "shots" : [
-        "shots/1.jpg",
-        "shots/2.jpg",
-        "shots/3.jpg"
-      ],
-      "slug" : "t-es-triste",
-      "summary" : "Un Tetris classique jouable sur iPhone avec des contrôles tactiles réactifs, du son, une musique désactivable séparément, un arrière-plan animé léger et la sauvegarde automatique de la partie en cours.",
-      "updated" : "2026-10-13",
-      "version" : 1
     }
   ],
   "publisher" : {
