@@ -71,6 +71,7 @@
       },
       "category" : "games",
       "hasPlaces" : true,
+      "heroImage" : "hero.jpg",
       "icon" : {
         "symbol" : "gamecontroller.fill",
         "tint" : "green"
@@ -93,7 +94,7 @@
       ],
       "slug" : "snake",
       "summary" : "Un jeu Snake simple, piloté avec quatre boutons à l’écran.",
-      "updated" : "2026-09-29",
+      "updated" : "2026-10-13",
       "version" : 3
     },
     {
@@ -101,7 +102,6 @@
         "email" : "olivier.hoachuck@gmail.com",
         "name" : "Olivier HO-A-CHUCK"
       },
-      "heroImage" : "hero.jpg",
       "icon" : {
         "symbol" : "gamecontroller.fill",
         "tint" : "indigo"
@@ -124,7 +124,7 @@
       ],
       "slug" : "eclate-ballons",
       "summary" : "Un jeu tactile où des ballons montent à l’écran et doivent être éclatés avant de s’échapper.",
-      "updated" : "2026-10-13",
+      "updated" : "2026-09-30",
       "version" : 2
     },
     {
