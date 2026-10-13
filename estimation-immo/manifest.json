@@ -3,20 +3,19 @@
     "email" : "olivier.hoachuck@gmail.com",
     "name" : "Olivier HO-A-CHUCK"
   },
-  "category" : "finance",
+  "category" : "productivity",
   "createdBy" : {
-    "promptVersion" : "23",
+    "promptVersion" : "25",
     "provider" : "llmproxy"
   },
   "entry" : "index.html",
   "icon" : {
-    "symbol" : "house.fill",
-    "tint" : "orange"
+    "symbol" : "chart.bar.fill",
+    "tint" : "blue"
   },
   "id" : "6E081856-6FF7-4251-9474-D8707225A724",
   "mcp" : [
-    "io.github.cturkieh\/france-data",
-    "fr.data.gouv\/catalogue"
+
   ],
   "name" : "Estimation immo",
   "networkOrigins" : [
@@ -29,5 +28,5 @@
   ],
   "schemaVersion" : 1,
   "summary" : "Évaluer indicativement le prix d’un bien situé en France à partir de son adresse, de ses caractéristiques et des ventes récentes de sa commune, puis retrouver localement les résultats complets enregistrés.",
-  "version" : 8
+  "version" : 12
 }

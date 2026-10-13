@@ -16,9 +16,14 @@
       "sha256" : "676c1b50f512989f71ae36b49c517c9de464715f29e129a08b2818df9422ab87"
     },
     {
-      "bytes" : 920,
+      "bytes" : 860,
       "path" : "manifest.json",
-      "sha256" : "bfb3f8a1ade5e4894b29444f0cc9e3e7fa8dc888700a1c10efda0c1e56ad409b"
+      "sha256" : "fafa25e5b1438377d6ce4d542a7d0421e22d23b32d2090e1b8211c55d06ad632"
+    },
+    {
+      "bytes" : 9672,
+      "path" : "skills.js",
+      "sha256" : "92dec8ccc4fdab62ee01a51d118bebd4507267c1e1b868f0ba61888cc4226379"
     },
     {
       "bytes" : 11974,

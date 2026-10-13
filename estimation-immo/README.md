@@ -14,6 +14,8 @@
 
 ![Capture](shots/6.jpg)
 
+![Capture](shots/7.jpg)
+
 ## Ce que cette app demande
 
 - `share.present`
@@ -23,16 +25,6 @@
 - https://apicarto.ign.fr
 - https://dvf-api.data.gouv.fr
 - https://tile.openstreetmap.org
-
-## Service nécessaire
-
-Cette app appelle un service qui **n’est pas fourni avec elle** :
-
-- `io.github.cturkieh/france-data`
-- `fr.data.gouv/catalogue`
-
-Sans ce service déclaré sur l’appareil, l’app s’installe et s’ouvre, mais
-ce qui en dépend échoue. Elle le dit à l’écran.
 
 ## Ce que c’est
 
